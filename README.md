@@ -23,8 +23,6 @@
    ```
 2. Установите зависимости:
    ```bash
-   python -m pip install -r requirements.txt
-   # или, если requirements.txt пуст:
    python -m pip install pytest selenium webdriver-manager
    ```
 3. Запустите все тесты:

@@ -18,10 +18,10 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/ваш-логин/aqatest-saucedemo.git
+   git clone https://github.com/a31409137-cell/aqatest-saucedemo.git
    cd aqatest-saucedemo
    ```
-2. Клонируйте репозиторий:
+2. Установите зависимости:
    ```bash
    python -m pip install -r requirements.txt
    # или, если requirements.txt пуст:

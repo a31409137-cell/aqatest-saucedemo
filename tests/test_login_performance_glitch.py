@@ -1,14 +1,13 @@
 import pytest
+from selenium.webdriver.common.by import By
 from page_objects.login_page import LoginPage
 
 def test_login_performance_glitch_user(page):
-    login_page = LoginPage(page)
-    login_page.navigate()
-    login_page.login("performance_glitch_user", "secret_sauce")
+    page.open()
+    page.login("performance_glitch_user", "secret_sauce")
+    
+    # Проверяем, что попали на inventory.html (даже при "glitch")
+    assert "/inventory.html" in page.driver.current_url
 
-    # Проверка URL
-    assert page.url == "https://www.saucedemo.com/inventory.html"
-
-    # Проверка отображения элементов (страница должна открыться несмотря на задержки)
-    assert page.locator("span.title").is_visible()
-    assert page.locator("span.title").text_content() == "Products"
+    title_elem = page.driver.find_element(By.CSS_SELECTOR, "span.title")
+    assert title_elem.text == "Products"

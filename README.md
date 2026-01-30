@@ -1,15 +1,22 @@
-# Тесты авторизации для Saucedemo
+# Автотесты для SauceDemo (Python + Selenium + pytest)
 
-Этот репозиторий содержит автоматизированные тесты на Python для проверки различных сценариев входа на сайте https://www.saucedemo.com/.
+Репозиторий содержит автоматизированные UI-тесты для сайта [https://www.saucedemo.com](https://www.saucedemo.com) на основе Page Object Model.
+
+Все тесты проходят локально (проверено на Python 3.14, Selenium 4.40).
+
+---
 
 ## Требования
-- Python 3.10
-- Docker (для запуска в контейнере)
+
+- Python 3.8+
+- Chrome (для запуска тестов в браузере)
+- Internet (для доступа к saucedemo.com)
+
+---
 
 ## Установка и запуск
 
-### Вариант 1: Локальный запуск
-1. Установите Python 3.10.
-2. Установите зависимости:
+1. Клонируйте репозиторий:
    ```bash
-   pip install -r requirements.txt
+   git clone https://github.com/ваш-логин/aqatest-saucedemo.git
+   cd aqatest-saucedemo

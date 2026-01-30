@@ -20,3 +20,14 @@
    ```bash
    git clone https://github.com/ваш-логин/aqatest-saucedemo.git
    cd aqatest-saucedemo
+   ```
+2. Клонируйте репозиторий:
+   ```bash
+   python -m pip install -r requirements.txt
+   # или, если requirements.txt пуст:
+   python -m pip install pytest selenium webdriver-manager
+   ```
+3. Запустите все тесты:
+   ```bash
+   python -m pytest tests/ -v
+   ```
